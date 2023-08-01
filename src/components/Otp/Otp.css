@@ -1,0 +1,56 @@
+/* Styling for the main container */
+.otp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  
+  /* Styling for the form container */
+  .otpForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the input container */
+  .inp {
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for the input labels */
+  .text {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Styling for the input fields */
+  .input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the verify OTP button */
+  .verifyOtp button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the change password button */
+  .changePassword button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

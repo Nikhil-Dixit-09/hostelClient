@@ -1,0 +1,105 @@
+.rotate{
+    transform: rotate(180deg);
+}
+.complain{
+    display: flex;
+    flex-direction: column;
+}
+.short{
+    display: flex;
+    flex-direction: row;
+}
+.long{
+    display: flex;
+    flex-direction: row;
+    font-weight: 900;
+}
+/* Styling for the complain component */
+.complain {
+   
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .short {
+    
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .short_hostel,
+  .short_roomNumber,
+  .short_status,.short_genre {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 20vw;
+  }
+  
+  .short_drop {
+    cursor: pointer;
+  }
+  
+  .short_dropDown,
+  .short_dropUp {
+    transition: transform 0.3s ease;
+  }
+  
+  .long {
+    max-height: 300px;
+    margin-top: 10px;
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+  
+  .long_description {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .long_image {
+    margin-top: 10px;
+  }
+  
+  .longSrc {
+    max-width: 100%;
+  }
+  
+  /* Custom styling for the dropdown icon */
+  .dropDown {
+    width: 20px;
+    height: 20px;
+  }
+  
+ 
+  
+  /* Optional: Hover effect */
+  .complain:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resolved{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .resolved .margin{
+    margin: 5px;
+  }
+  .noborder{
+    border: none;
+  }
+  .longSrc{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }

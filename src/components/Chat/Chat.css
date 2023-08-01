@@ -1,0 +1,9 @@
+.chat__main{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+.chatRow{
+    display: flex;
+    flex-direction: row;
+}

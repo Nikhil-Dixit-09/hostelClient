@@ -1,0 +1,77 @@
+/* Styling for the form container */
+.complain_form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the form elements */
+  .complain_select,
+  .complain_input,
+  .complain_option,
+  .complain_submit {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style the select dropdown arrow */
+  .complain_select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    padding-right: 25px;
+  }
+  
+  /* Optional: Customize the select dropdown arrow */
+  .complain_select::-ms-expand {
+    display: none;
+  }
+  
+  .complain_option {
+    padding: 10px;
+  }
+  
+  .complain_image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .complain_image input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .complain_submit {
+    background-color: #5bc99e;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .complain_submit:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .complain_genre,
+  .complain_hostel,
+  .complain_roomNumber,
+  .complain_description {
+    display: flex;
+    align-items: center;
+  }
+  
+  .complain_photo{
+    padding: 10px;
+  }
+  .tick{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }

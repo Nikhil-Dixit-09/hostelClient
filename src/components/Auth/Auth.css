@@ -1,0 +1,91 @@
+.forms {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Roboto, sans-serif ;
+    letter-spacing: 0.4px;
+  }
+  
+  .cnt {
+    margin-bottom: 20px;
+  }
+  
+  .inp {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .signup button,
+  .signin button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .signup button:hover,
+  .signin button:hover {
+    background-color: #45a049;
+  }
+  
+  .signup button[type='submit'],
+  .signin button[type='submit'] {
+    background-color: #008CBA;
+  }
+  
+  .signup button[type='submit']:hover,
+  .signin button[type='submit']:hover {
+    background-color: #007bb3;
+  }
+  
+  .signup button,
+  .signin button,
+  .signup button[type='submit'],
+  .signin button[type='submit'] {
+    font-size: 20px;
+  }
+  
+  .buttons {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    color: #000;
+    cursor: pointer;
+  }
+  
+ 
+  
+ 
+  .checkbox{
+    display: flex;
+    flex-direction: row;
+  }
+  .forgot-password {
+    margin-bottom: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    width: fit-content;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,94 @@
+.chat__mainHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+.hangout{
+    width: 30vw;
+}
+
+.chatBody {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .chat__mainHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .hangout {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .leavebutton {
+    display: flex;
+    align-items: center;
+  }
+  
+  .leaveChat__btn {
+    background-color: #ff6464;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .leaveChat__btn:hover {
+    background-color: #e50000;
+  }
+  
+  .message__container {
+    overflow-y: auto;
+    max-height: 1000px;
+    width: vw;
+  }
+  
+  .message__chats {
+    margin-bottom: 10px;
+  
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  
+  .sender__name {
+    font-size: 12px;
+    color: #888888;
+  }
+  
+  .message__sender,
+  .message__recipient {
+   
+    border-radius: 6px;
+  }
+  
+  .message__sender {
+    background-color: #f3e9a7;
+  }
+  
+  .message__recipient {
+    background-color: #a9dcff;
+  }
+  .righty{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .columnFlex{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
