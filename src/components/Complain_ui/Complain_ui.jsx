@@ -10,14 +10,14 @@ import { useSelector } from 'react-redux'
 import ComplainEdit from '../ComplainEdit/ComplainEdit'
 import Modal from 'react-modal';
 const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
 };
 Modal.setAppElement('#root');
 const Complain_ui = (props) => {
@@ -29,12 +29,12 @@ const Complain_ui = (props) => {
     }
     function closeModal() {
         setIsOpen(false);
-      }
+    }
     const dispatch = useDispatch();
     let arr = ["NA", "Pending", "In Progress", "Resolved"]
     const [show, setShow] = useState(false);
     const myUser = useSelector((state) => state.user);
-      console.log(myUser);
+    console.log(myUser);
     const handleShow = () => {
         setShow(true);
     }
@@ -85,19 +85,19 @@ const Complain_ui = (props) => {
 
 
                         <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    style={customStyles}
-                    contentLabel="Complaint Form"
-                  >
-                    
-                    <ComplainEdit existing={props.complain}/>
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                            contentLabel="Complaint Form"
+                        >
 
-                    <div className='modalCenter'>
-                      <button className='closeModal' onClick={closeModal}>close</button>
-                    </div>
+                            <ComplainEdit existing={props.complain} />
 
-                  </Modal>
+                            <div className='modalCenter'>
+                                <button className='closeModal' onClick={closeModal}>close</button>
+                            </div>
+
+                        </Modal>
                     </div>
                 }
                 {
@@ -155,9 +155,13 @@ const Complain_ui = (props) => {
                     <div className='long_description'>
                         Description: {props.complain.description}
                     </div>
-                    <div className='long_image'>
-                        <img className='longSrc' src={props.complain.img} alt='error' />
-                    </div>
+                    {
+                        props.complain.img.length !== 0 &&
+                        <div className='long_image'>
+                            <img className='longSrc' src={props.complain.img} alt='error' />
+                        </div>
+                    }
+
                 </div>
 
             }
