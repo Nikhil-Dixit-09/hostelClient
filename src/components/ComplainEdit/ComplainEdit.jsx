@@ -8,20 +8,28 @@ const ComplainEdit = (props) => {
     const dispatch=useDispatch();
     const [file,setFile]=useState();
     const [genre,setGenre]=useState(props.existing.genre);
+    const [img,setImg]=useState(props.existing.img);
     const [hostel,setHostel]=useState(props.existing.hostel);
     const [roomNumber,setRoom]=useState(props.existing.roomNumber);
     const [description,setDescription]=useState(props.existing.description);
     const [edited,setEdited]=useState(false);
+    const handleImageEdit=(e)=>{
+        const data=new FileReader();
+      data.addEventListener('load',()=>{
+        setImg(data.result);
+      });
+      data.readAsDataURL(e.target.files[0]);
+    }
     const handleEdit=(e)=>{
         e.preventDefault();
-        const formData = new FormData();
-        formData.append("image", file);
-        formData.append("description", description);
-        formData.append("genre", genre);
-        formData.append("hostel",hostel);
-        formData.append("roomNumber", roomNumber);
-        formData.append("id",props.existing._id);
-        console.log(formData);
+        let formData={};
+        formData.file=file;
+        formData.genre=genre;
+        formData.hostel=hostel;
+        formData.roomNumber=roomNumber;
+        formData.description=description;
+        formData.img=img;
+        formData.id=props.existing._id;
         dispatch(editComplaint(formData));
         setEdited(true);
     }
@@ -61,7 +69,7 @@ const ComplainEdit = (props) => {
         </div>
         <div className='complain_image'>
             Image:
-            <input className='complain_photo' type='file' filename={file} accept="image/*" onChange={(e)=>setFile(e.target.files[0])}></input>
+            <input className='complain_photo' type='file'  accept="image/*" onChange={handleImageEdit}></input>
         </div>
         <button className='complain_submit' type='submit'>Edit Complain</button>
         

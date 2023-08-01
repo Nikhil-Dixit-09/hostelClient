@@ -156,7 +156,7 @@ const Complain_ui = (props) => {
                         Description: {props.complain.description}
                     </div>
                     <div className='long_image'>
-                        <img className='longSrc' src={`data:image/png;base64,${props.complain.img}`} alt='error' />
+                        <img className='longSrc' src={props.complain.img} alt='error' />
                     </div>
                 </div>
 

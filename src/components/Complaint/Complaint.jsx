@@ -7,27 +7,34 @@ import tick from '../../assets/icons8-tick-30.png'
 const Complaint = () => {
     const dispatch=useDispatch();
     const [file,setFile]=useState();
+    const [image,setImage]=useState('');
     const [genre,setGenre]=useState('Carpentary');
     const [hostel,setHostel]=useState('BH-1');
     const [roomNumber,setRoom]=useState('');
     const [description,setDescription]=useState('');
     const [added,setAdded]=useState(false);
     const myUser = useSelector((state) => state.user);
+    const handleImageUpload=(e)=>{
+      const data=new FileReader();
+      data.addEventListener('load',()=>{
+        setImage(data.result);
+      });
+      data.readAsDataURL(e.target.files[0]);
+    }
     const formSubmit=(e)=>{
         e.preventDefault();
       
        
-        const formData = new FormData();
-        formData.append("image", file);
-        formData.append("description", description);
-        formData.append("genre", genre);
-        formData.append("hostel",hostel);
-        formData.append("roomNumber", roomNumber);
-        console.log(formData);
-        
-        for(var pair of formData.entries()) {
-            console.log(pair[0]+', '+pair[1]);
-          }
+        let formData={};
+        formData.file=file;
+        formData.genre=genre;
+        formData.hostel=hostel;
+        formData.roomNumber=roomNumber;
+        formData.description=description;
+        formData.added=added;
+        formData.image=image;
+        console.log(image);
+
         dispatch(addComplaint(formData));
         setAdded(true);
     }
@@ -66,7 +73,7 @@ const Complaint = () => {
         </div>
         <div className='complain_image'>
             Image:
-            <input className='complain_photo' type='file' filename={file} accept="image/*" onChange={(e)=>setFile(e.target.files[0])}></input>
+            <input className='complain_photo' type='file'  accept="image/*" onChange={handleImageUpload}></input>
         </div>
         <button className='complain_submit' type='submit'>Add Complain</button>
         {
