@@ -6,7 +6,7 @@ import Home from './components/Home/Home'
 import Auth from './components/Auth/Auth.jsx'
 import Chat from './components/Chat/Chat'
 import socketIO from 'socket.io-client';
-const socket = socketIO.connect('http://localhost:8000');
+const socket = socketIO.connect('https://hostel-backend-sigma.vercel.app');
 const App=()=>{
     
     return(
